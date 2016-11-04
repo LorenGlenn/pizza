@@ -8,6 +8,23 @@
 
 _This application allows the user to create their own pizza with the provided options and displays the cost of the pizza they created._
 
+## Specifications
+
+1. It can create an object with the user's name
+  * Example Input: loren
+  * Example Output: loren
+
+2. It can add user selections to the object
+  * Example Input: pepperoni, pineapple, olives
+  * Example Output: toppings['pepperoni','pineapple','olives']
+
+3. It can use prototypes to transform the object
+  * Example Input: large, extra cheese
+  * Example Output: "A large pizza with extra cheese!"
+
+4. It can keep track of the cost of the pizza during the ordering process
+  * Example Input: large, extra cheese
+  * Example Output: cost = 10 + 3
 
 ## Setup/Installation Requirements
 
@@ -16,7 +33,7 @@ _This application allows the user to create their own pizza with the provided op
 
 ## Known Bugs
 
-_Multiple clicks on an option will add the price multiple times_
+_Multiple clicks on an option will add to the price of the object but give no extra item to the user other than in the toppings section_
 
 ## Support and contact details
 
@@ -24,7 +41,7 @@ _lorencglenn@gmail.com_
 
 ## Technologies Used
 
-_I used JavaScript and Jquery to create an object for the order and keep track of the options selected by the user_
+_I used JavaScript and Jquery to gather the user input and display it back to the user through an object_
 
 ### License
 

@@ -1,3 +1,43 @@
 #size-section, #sauce-section, #cheese-section, #topping-section, #output {
   display: none;
 }
+
+* {
+  text-align: center;
+}
+
+input {
+  width: 500px;
+}
+
+.jumbotron {
+  background-color: #7ec9f2;
+}
+
+#size-section {
+  background-color: #7dbd7f;
+  padding-bottom: 50px;
+}
+
+#size-section h2, #sauce-section h2, #cheese-section h2, #topping-section h2{
+  padding-bottom: 50px;
+}
+
+#sauce-section {
+  background-color: #c43030;
+  padding-bottom: 50px;
+}
+#cheese-section {
+  background-color: #e8b450;
+  padding-bottom: 50px;
+}
+#topping-section {
+  background-color: #caaafc;
+  padding-bottom: 50px;
+}
+
+#topping-section .row:last {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid black;
+}

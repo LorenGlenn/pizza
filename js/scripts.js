@@ -6,9 +6,14 @@ function Order(name, street, city) {
   this.toppings = [];
 }
 
-Order.prototype.checkout = function() {
-  var fullAddress = this.name + ": located at: " + this.street + ", " + this.city + ".";
+Order.prototype.details = function() {
   var orderDetails = this.size + " pizza with " + this.sauce + ". Extra cheese?: " + this.extraCheese + " Toppings: " + this.toppings;
+  return orderDetails;
+}
+
+Order.prototype.address = function() {
+  var fullAddress = this.name + ": located at: " + this.street + ", " + this.city + ".";
+  return fullAddress;
 }
 
 $(document).ready(function(){
@@ -18,25 +23,33 @@ $(document).ready(function(){
     var city = $('#city').val();
     newOrder = new Order(name, street, city);
     $('#welcome-form').hide();
-    $('#size-section').show();
+    $('#size-section').fadeIn();
   });
   $('.size').click(function(){
     newOrder.cost = parseInt($(this).val());
     newOrder.size = $(this).text();
-    $('#sauce-section').show();
+    $('#sauce-section').fadeIn();
   });
   $('.sauce').click(function(){
     newOrder.cost += parseInt($(this).val());
     newOrder.sauce = $(this).text();
-    $('#cheese-section').show();
+    $('#cheese-section').fadeIn();
   });
   $('.cheese').click(function(){
     newOrder.cost += parseInt($(this).val());
     newOrder.extraCheese = $(this).text();
-    $('#topping-section').show();
+    $('#topping-section').fadeIn();
   });
   $('.topping').click(function(){
     newOrder.cost += parseInt($(this).val());
     newOrder.toppings.push($(this).text());
   });
+  $('#checkout').click(function(){
+    $('#output').fadeIn();
+    var orderDetails = newOrder.details();
+    var fullAddress = newOrder.address();
+    $('#location').append(fullAddress);
+    $('#pizza-details').append(orderDetails);
+    $('#total').append(newOrder.cost);
+  })
 });

@@ -9,22 +9,22 @@
   </head>
   <body>
     <div class="container">
-      <div id="welcome-form">
-        <h1>Welcome!</h1>
+      <div id="welcome-form" class="jumbotron">
+        <h1>Welcome to Pizza Shack!</h1>
         <form id="pizza-form">
           <div class="form-group">
-            <label for="name">Enter name for order:</label>
+            <label for="name">Enter a name for the order:</label><br>
             <input type="text" name="name" id="name">
           </div>
           <div class="form-group">
-            <label for="street">Enter your street address:</label>
+            <label for="street">Enter your street address:</label><br>
             <input type="text" name="street" id="street">
           </div>
           <div class="form-group">
-            <label for="city">Enter your city:</label>
+            <label for="city">Enter your city:</label><br>
             <input type="text" name="city" id="city">
           </div>
-          <button type="button" id="submit">Start your order!</button>
+          <button class="btn btn-success"type="button" id="submit">Start your order!</button>
         </form>
       </div>
       <div class="well" id="size-section">
@@ -99,7 +99,14 @@
         <button class="btn btn-primary"type="button" id="checkout">Checkout</button>
       </div>
       <div class="well" id="output">
-
+        <h2>Review your order:</h2>
+        <p id="location">
+        </p>
+        <p id="pizza-details">
+        </p>
+        <p>
+          Your total comes to: $<span id="total"></span>
+        </p>
       </div>
     </div>
   </body>

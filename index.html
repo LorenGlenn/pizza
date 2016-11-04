@@ -8,22 +8,99 @@
     <title>Order Pizza</title>
   </head>
   <body>
-    <h1>Welcome!</h1>
-    <form id="pizza-form">
-      <div class="form-group">
-        <label for="name">Enter name for order:</label>
-        <input type="text" name="name" id="name">
+    <div class="container">
+      <div id="welcome-form">
+        <h1>Welcome!</h1>
+        <form id="pizza-form">
+          <div class="form-group">
+            <label for="name">Enter name for order:</label>
+            <input type="text" name="name" id="name">
+          </div>
+          <div class="form-group">
+            <label for="street">Enter your street address:</label>
+            <input type="text" name="street" id="street">
+          </div>
+          <div class="form-group">
+            <label for="city">Enter your city:</label>
+            <input type="text" name="city" id="city">
+          </div>
+          <button type="button" id="submit">Start your order!</button>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="street">Enter your street address:</label>
-        <input type="text" name="street" id="street">
+      <div class="well" id="size-section">
+        <h2>Please select a size:</h2>
+        <div class="row">
+          <div class="col-xs-3">
+            <button class="size btn btn-primary" type="button" id="xlarge" value="15">Extra-Large</button>
+          </div>
+          <div class="col-xs-3">
+            <button class="size btn btn-primary" type="button" id="large" value="10">Large</button>
+          </div>
+          <div class="col-xs-3">
+            <button class="size btn btn-primary" type="button" id="medium" value="8">Medium</button>
+          </div>
+          <div class="col-xs-3">
+            <button class="size btn btn-primary" type="button" id="small" value="5">Small</button>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="city">Enter your city:</label>
-        <input type="text" name="city" id="city">
+      <div class="well" id="sauce-section">
+        <h2>Please select a sauce:</h2>
+        <div class="row">
+          <div class="col-xs-6">
+            <button class="sauce btn btn-primary" type="button" id="red" value="1">Red Sauce</button>
+          </div>
+          <div class="col-xs-6">
+            <button class="sauce btn btn-primary" type="button" id="white" value="3">White Sauce</button>
+          </div>
+        </div>
       </div>
-      <button type="submit" id="submit">Start your order!</button>
-    </form>
+      <div class="well" id="cheese-section">
+        <h2>Extra Cheese?</h2>
+        <div class="row">
+          <div class="col-xs-6">
+            <button class="cheese btn btn-primary" type="button" id="yes" value="3">Yes!</button>
+          </div>
+          <div class="col-xs-6">
+            <button class="cheese btn btn-primary" type="button" id="nah" value="0">No.</button>
+          </div>
+        </div>
+      </div>
+      <div class="well" id="topping-section">
+        <h2>Select Toppings:</h2>
+        <div class="row">
+          <div class="col-xs-3">
+            <button class="topping btn btn-primary" type="button" id="pepperoni" value="2">Pepperoni</button>
+          </div>
+          <div class="col-xs-3">
+            <button class="topping btn btn-primary" type="button" id="sausage" value="2">Sausage</button>
+          </div>
+          <div class="col-xs-3">
+            <button class="topping btn btn-primary" type="button" id="mushrooms" value="1">Mushrooms</button>
+          </div>
+          <div class="col-xs-3">
+            <button class="topping btn btn-primary" type="button" id="olives" value="1">Olives</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3">
+            <button class="topping btn btn-primary" type="button" id="canadian" value="3">Canadian Bacon</button>
+          </div>
+          <div class="col-xs-3">
+            <button class="topping btn btn-primary" type="button" id="pineapple" value="2">Pineapple</button>
+          </div>
+          <div class="col-xs-3">
+            <button class="topping btn btn-primary" type="button" id="onions" value="1">Onions</button>
+          </div>
+          <div class="col-xs-3">
+            <button class="topping btn btn-primary" type="button" id="peppers" value="1">Green Peppers</button>
+          </div>
+        </div>
+        <button class="btn btn-primary"type="button" id="checkout">Checkout</button>
+      </div>
+      <div class="well" id="output">
 
+      </div>
+    </div>
   </body>
 </html>

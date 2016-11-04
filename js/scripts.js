@@ -45,6 +45,10 @@ $(document).ready(function(){
     newOrder.toppings.push($(this).text());
   });
   $('#checkout').click(function(){
+    $('#size-section').fadeOut();
+    $('#sauce-section').fadeOut();
+    $('#cheese-section').fadeOut();
+    $('#topping-section').fadeOut();
     $('#output').fadeIn();
     var orderDetails = newOrder.details();
     var fullAddress = newOrder.address();

@@ -36,8 +36,16 @@ input {
   padding-bottom: 50px;
 }
 
-#topping-section .row:last {
-  padding-top: 30px;
+#topping-section .row {
   padding-bottom: 30px;
+}
+
+#topping-rows {
   border-bottom: 1px solid black;
+  margin-bottom: 50px;
+}
+
+#output {
+  font-size: 18pt;
+  background-color: #96ad79;
 }
